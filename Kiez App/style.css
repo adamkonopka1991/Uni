@@ -1,0 +1,128 @@
+@media all{
+    
+    body {
+        background-color: #EFF1F2;
+        color: #656666;
+        font-family: sans-serif;
+        line-height: 1.5em;
+    }
+    
+    section h1, section h2, section h3, section h4, section h5, section h6 {
+        text-transform: uppercase;
+        font-weight: normal;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        letter-spacing:0.1em;
+    }
+    
+    #container {
+        background-color: white;
+        margin: 2em auto;
+        min-height: 400px;
+        max-width: 960px;
+        border-radius: 20px;
+        
+    }
+    
+    #container>footer, #container>nav {
+        background-color: #B6B7B7;
+    }
+    
+    #hauptueberschrift{
+        margin-top: 1em;
+        margin-bottom:0.5em;
+    }
+    
+    .flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .flex-item {
+        width: 288px;
+        height: 288px;
+        position:relative;
+    }
+    
+    .beschreibung {
+        position: absolute;
+        bottom: 0;
+        color: white;
+    }
+    
+    
+    nav, footer{
+        overflow: hidden;
+    }
+    
+    header, nav, footer, #container{
+        padding: 1em;
+    }
+    
+    h1,h2,h3,h4,h5,h6 {
+        margin: 0;
+        line-height: 1.2em;
+    }
+    
+    ul{
+        margin: 0;
+    }
+    
+    
+    nav ul li, footer ul li{
+        list-style-type: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-right: 1em;
+    }
+    
+    nav ul li{
+        float: left;
+    }
+    
+    footer ul li{
+        float: right;
+    }
+    
+    td {
+      padding: 1em 0.5em;  
+    }
+    
+    td:first-child {
+        text-align: left;
+        font-weight: bold;
+    }
+    
+    td:nth-cild(even) {
+        text-align: left;
+        font-weight: bold;
+    }
+    
+    td:last-child {
+        text-align: right:;
+        
+    }
+    
+    header img{
+        display: inline-block;
+        width: 100%;
+    }
+    
+    nav ul li.open{
+        font-weight: bold;
+    }
+    
+    a {
+        color: #444;
+    }
+    
+    a:link {
+        text-decoration: none;
+    }
+    
+    a:hover{
+        text-decoration: underline;
+        color: #222;
+    }
+}

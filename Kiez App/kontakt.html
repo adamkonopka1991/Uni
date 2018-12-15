@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        
+    </head>
+    
+    <body>
+        <div id="container">
+        <header>
+            <img src="Logo.png" width=40%>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Intro</a></li>
+                <li><a href="seite2.htm">Wolkenkratzer</a></li>
+            </ul>
+        </nav>
+        
+        <section>
+        <hr>
+            <form action="http://18.218.208.183:3000/request" method="POST">
+                
+                <label id="anrede">Anrede</label>
+                <select id="anrede" required="required">
+                    <option value="herr">Herr</option>
+                    <option value="frau">Frau</option>
+                </select>
+                <br>
+                
+                <label id="vorname">Vorname</label>
+                <input type="text"name="name" id="vorname" required="required">
+                <br>
+                
+                <label id="nachname">Nachname</label>
+                <input type="text" id="nachname" required="required">
+                <br>
+                
+                <label id="email">E-Mail</label>
+                <input type="email" name="email" id="email" required="required">
+                <br>
+                
+                <label id="bezirk">Bezirk</label>
+                <input type="text" id="bezirk" list="bezirke">
+                    <datalist id="bezirke">
+                        <option value="Lichtenberg">
+                        <option value="Friedrichshain-Kreuzberg">
+                        <option value="Pankow">
+                        <option value="Mitte">
+                        <option value="Marzahn-Hellersdorf">
+                        <option value="Treptow-Köpenick">
+                        <option value="Neukölln">
+                        <option value="Tempelhof-Schöneberg">
+                        <option value="Steglitz-Zehlendorf">
+                        <option value="Charlottenburg-Wilmersdorf">
+                        <option value="Spandau">
+                        <option value="Reinickendorf">
+                        
+                    </datalist>
+                </input>
+                <br>
+                
+                <label id="telefon">Telefon</label>
+                <input type="tel" id="telefon">
+                <br>
+                
+                <label id="betreff" name="title">Betreff</label>
+                <input type="text" id="betreff">
+                <br>
+                
+                <label id="nachricht">Nachricht</label>
+                <textarea id="nachricht" name="message">Bitte formulieren Sie hier Ihre Nachricht</textarea>
+                <br>
+                
+                <input type="reset" value="Zurücksetzen"><input type="submit" value="Senden">
+                
+                
+                
+                
+                
+                
+                    
+                
+                
+                
+            </form>
+        
+        
+        <hr>    
+        </section>
+        
+        <footer>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+            </ul>
+            
+        </footer>
+        </div>
+    </body>
+</html>
