@@ -2,6 +2,27 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        let schalter= false;
+        
+        function MenuButtonHandler()
+        {
+            schalter=!schalter;
+            let navScreen= document.getElementById("navScreen");
+            navScreen.appendChild(document.getElementById("MainNav"));
+            if(schalter)
+            {
+                
+                navScreen.style.display= 'block';
+            }
+            else
+            {
+                navScreen.style.display= 'none';
+            }
+        }
+        
+    </script>
 </head>
 <html>
     
@@ -15,24 +36,37 @@
     </head>
     
     <body>
+    <!-- Falls der Button gedrückt wurde-->
+           <div id="navScreen"><button onClick="MenuButtonHandler()">MENU</button></div>
         <div id="container">
         <header>
-            <img src="Logo.png" width=40%>
+            <img src="Logo.png" width="40%">
         </header>
         
-        <nav>
+        <nav id="MainNav">
             <ul>
                 <li class="open"><a href="index.html">Intro</a></li>
                 <li><a href="seite2.html">Wolkenkratzer</a></li>
             </ul>
         </nav>
+
+        <nav id="navMobile">
+           <ul>
+                <li><button onClick="MenuButtonHandler()">MENU</button></li>
+           </ul> 
+
+           <!-- Falls der Button gedrückt wurde-->
+           <div id="navScreen"><button onClick="MenuButtonHandler()">MENU</button></div>
+        </nav>
+
+        
         
         <section>
-            <hr>
-            <header>
+            
+            
                 <h3 id="hauptueberschrift">Intro</h3>
                 <img src="Rathaus-Berlin-Lichtenberg.jpg" height=50% width=50%>
-            </header>
+            
             
             <article>
                 <p>
@@ -102,7 +136,7 @@
                 </ul>
                 
             </footer>
-        <hr>    
+           
         </section>
         
         <footer>
