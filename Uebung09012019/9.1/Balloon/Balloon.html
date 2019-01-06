@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <head>
     <meta charset= "utf-8">
-    
-</head>
-<body onkeypress="inflate(event)">
-    
-
-    <div  id="balloon"></div>
-    <div id="erg"></div>
-
     <script>
-            let balelement= document.getElementById("balloon");
-            balelement.innerHTML="🎈 hjhj";
             
             function inflate(event)
             {
-                if(event.key=="ArrowUp")
+                let balelement= document.getElementById("balloon");
+                balelement.style.fontSize= balelement.style.fontSize || "1em";
+                let length= balelement.style.fontSize.length;
+                let fontNumber=Number(balelement.style.fontSize.slice(0,length-2));
+                
+                
+
+                if(fontNumber<2)
                 {
-                    balelement.style.fontSize= "larger";
+                    
+                    if(event.key=="ArrowUp")
+                    {
+                        fontNumber=fontNumber+0.1;
+                    }
+                    if(event.key=="ArrowDown")
+                    {
+                        fontNumber= fontNumber-0.1;
+                    }
+                    balelement.style.fontSize= fontNumber+ "em";
                 }
-                if(event.key=="ArrowDown")
+
+                else 
                 {
-                    balelement.style.fontSize= "smaller";
+                    balelement.innerHTML= "💥";
                 }
-                console.log(event.key);
+
             }
-    
-            
-    
     </script>
-
     
-
+</head>
+<body onkeypress="inflate(event)">
+    <div  id="balloon">🎈</div>
 </body>
