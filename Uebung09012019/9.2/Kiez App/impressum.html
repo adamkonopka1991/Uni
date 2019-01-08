@@ -3,6 +3,28 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+
+        
+        let schalter= false;
+        
+        function MenuButtonHandler()
+        {
+            schalter=!schalter;
+            let navScreen= document.getElementById("navScreen");
+            
+            if(schalter)
+            {
+                
+                navScreen.style.display= 'block';
+            }
+            else
+            {
+                navScreen.style.display= 'none';
+            }
+        }
+        
+    </script>
 </head>
 <html>
     
@@ -16,16 +38,34 @@
     </head>
     
     <body>
-        <div id="container">
-        <header>
-            <img src="Logo.png" width=40%>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Intro</a></li>
+
+        <!-- Hier das Menü wenn der Button in der mobilen Variante gedrückt wird gedrückt wurde -->
+        <div id="navScreen">
+            <button onClick="MenuButtonHandler()">MENU</button>
+            <ul class="NavScreenNav">
+                <li class="open"><a href="index.html">Intro</a></li>
                 <li><a href="seite2.html">Wolkenkratzer</a></li>
             </ul>
+        </div>
+        <!-- Hier Ende dieses Blocks -->
+
+        <div id="container">
+        <header>
+            <img src="Logo.png" width="40%">
+        </header>
+        <!-- Navigation im normalen Fall -->
+        <nav id="MainNav">
+            <ul>
+                <li class="open"><a href="index.html">Intro</a></li>
+                <li><a href="seite2.html">Wolkenkratzer</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Navigation im mobilen Fall -->
+        <nav id="navMobile">
+           <ul>
+                <li><button onClick="MenuButtonHandler()">MENU</button></li>
+           </ul> 
         </nav>
         
         <section>

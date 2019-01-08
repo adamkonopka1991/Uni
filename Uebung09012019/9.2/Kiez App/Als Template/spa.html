@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+
+        
+        let schalter= false;
+        
+        function MenuButtonHandler()
+        {
+            schalter=!schalter;
+            let navScreen= document.getElementById("navScreen");
+            
+            if(schalter)
+            {
+                
+                navScreen.style.display= 'block';
+            }
+            else
+            {
+                navScreen.style.display= 'none';
+            }
+        }
+        
+    </script>
+
+    <meta charset="utf-8">
+    <title>
+        Startseite Kiez-App
+    </title>
+        
+</head>
+    
+<body>
+
+    <!-- Hier das Menü wenn der Button in der mobilen Variante gedrückt wird gedrückt wurde -->
+    <div id="navScreen">
+        <button onClick="MenuButtonHandler()">MENU</button>
+        <ul class="NavScreenNav">
+            <li><a class="indexlink">Intro</a></li>
+            <li><a class="seite2link">Wolkenkratzer</a></li>
+        </ul>
+    </div>
+    <!-- Hier Ende dieses Blocks -->
+
+    <div id="container">
+    <header>
+        <img src="Logo.png" width="40%">
+    </header>
+    <!-- Navigation im normalen Fall -->
+    <nav id="MainNav">
+        <ul>
+            <li><a class="indexlink">Intro</a></li>
+            <li><a class="seite2link">Wolkenkratzer</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Navigation im mobilen Fall -->
+    <nav id="navMobile">
+        <ul>
+            <li><button onClick="MenuButtonHandler()">MENU</button></li>
+        </ul> 
+    </nav>
+
+    
+    
+    <section id="PageContent"></section>
+    
+    <footer>
+        <ul>
+            <li><a class="indexlink">Home</a></li>
+            <li><a class="kontaktlink">Kontakt</a></li>
+            <li><a class="impressumlink">Impressum</a></li>
+        </ul>
+        
+    </footer>
+    </div>
+
+<!-- Templates die im PageContent- Bereich gerndert werden könnten: -->
+<!-- ******************************************************************************************************************************** -->
+
+<!-- Index - Template
+################################################################################################################################# -->
+<template id="index">
+    <div>
+        <h3 id="hauptueberschrift">Intro</h3>
+        <img src="Rathaus-Berlin-Lichtenberg.jpg" height=50% width=50%>
+    
+    
+    <article>
+        <p>
+            <h4>Beschreibung</h4>
+            <p>
+                Lichtenberg ist ein schöner Stadteil in dem ich wohne. Er ist
+                gekennzeichnet durch wunderschöne kommunistische Bauten, die
+                für viele Menschen günstigen Wohnraum bieten. Aber auch das Kiezflair
+                kommt bei uns nicht zu kurz: Um den Bahnhof Lichtenberg 
+                gibt es Bauten aus früheren Epochen und Straßen die mit Spätis
+                gespickt sind. <br>
+                
+                <cite>Ein Zitat</cite>
+            </p>
+        </p>
+        <p>
+            <h4>Daten</h4>
+            <p>
+                <table border>
+                    <tr>
+                        <td>Einwohner</td>
+                        <td>280721</td>
+                    </tr>
+                    <tr>
+                        <td>Bevölkerungsdichte</td>
+                        <td>5369 Einwohner/km²</td>
+                    </tr>
+                    <tr>
+                        <td>Arbeitslosenquote</td>
+                        <td>7,6%</td>
+                    </tr>
+                    <tr>
+                        <td>Ausländeranteil</td>
+                        <td>14,3%</td>
+                    </tr>
+                </table>
+            </p>
+        </p>
+        
+        <p>
+            <h4>Sehenswürdigkeiten</h4>
+            <p>
+                <ul>
+                    <li><a href="https://www.stasimuseum.de/">Stasimuseum</a></li>
+                    <li><a href="http://www.dongxuan-berlin.de/de/">Dong Xuan Center</a></li>
+                    <li><a href="https://de.wikipedia.org/wiki/Rathaus_Lichtenberg">Rathaus Lichtenberg</a></li>
+                </ul>
+                
+            </p>
+            
+        </p>
+        
+        <p>
+            <h4>Die Youtube-Suche nach Lichtenberg hat folgendes ergeben:</h4>
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tIiFF1V4cj8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+            
+        </p>
+        
+    </article>
+    
+    <footer>
+        <ul>
+            <li><a href="">vorheriger Artikel</a></li>
+            <li><a href="">nächster Artikel</a></li>
+        </ul>
+        
+    </footer>
+</div>
+
+</template>
+
+<!-- seite2 - Template 
+############################################################################################################################# -->
+
+<template id="seite2">
+<div>
+        <div class="flexbox">
+                
+                
+                <div class="flex-item" style="background-image: url(hochhaus1.png)">
+                    <div class="beschreibung">
+                    Doppelhochhaus Typ SK 65
+                    Wohnhaus
+                    73,8
+                    </div>
+                </div>
+                <div class="flex-item" style="background-image: url(hochhaus2.jpg)">
+                    <div class="beschreibung">
+                    Doppelhochhaus Typ WHH GT 18/21
+                    Wohnhaus
+                    64
+                    </div>
+                </div>
+                <div class="flex-item" style="background-image: url(hochhaus3.JPG)">
+                    <div class="beschreibung">
+                    Doppelhochhaus Typ WHH GT 18/21
+                    Wohnhaus
+                    63,9
+                    </div>
+                </div>
+            
+       
+            
+        </div>
+        
+        <footer>
+            
+            
+        </footer>
+</div>
+
+</template>
+
+<!-- kontakt - Template 
+############################################################################################################################# -->
+
+<template id="kontakt">
+<div>
+
+        <form action="http://18.218.208.183:3000/request" method="POST">
+                
+            <label id="anrede">Anrede</label>
+            <select id="anrede" required="required">
+                <option value="herr">Herr</option>
+                <option value="frau">Frau</option>
+            </select>
+            <br>
+            
+            <label id="vorname">Vorname</label>
+            <input type="text"name="name" id="vorname" required="required">
+            <br>
+            
+            <label id="nachname">Nachname</label>
+            <input type="text" id="nachname" required="required">
+            <br>
+            
+            <label id="email">E-Mail</label>
+            <input type="email" name="email" id="email" required="required">
+            <br>
+            
+            <label id="bezirk">Bezirk</label>
+            <input type="text" id="bezirk" list="bezirke">
+                <datalist id="bezirke">
+                    <option value="Lichtenberg">
+                    <option value="Friedrichshain-Kreuzberg">
+                    <option value="Pankow">
+                    <option value="Mitte">
+                    <option value="Marzahn-Hellersdorf">
+                    <option value="Treptow-Köpenick">
+                    <option value="Neukölln">
+                    <option value="Tempelhof-Schöneberg">
+                    <option value="Steglitz-Zehlendorf">
+                    <option value="Charlottenburg-Wilmersdorf">
+                    <option value="Spandau">
+                    <option value="Reinickendorf">
+                    
+                </datalist>
+            </input>
+            <br>
+            
+            <label id="telefon">Telefon</label>
+            <input type="tel" id="telefon">
+            <br>
+            
+            <label id="betreff" name="title">Betreff</label>
+            <input type="text" id="betreff">
+            <br>
+            
+            <label id="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="message">Bitte formulieren Sie hier Ihre Nachricht</textarea>
+            <br>
+            
+            <input type="reset" value="Zurücksetzen"><input type="submit" value="Senden">
+            
+            
+            
+            
+            
+            
+                
+            
+            
+            
+        </form>
+    
+    
+
+</template>
+</div>
+
+<!-- impressum - Template 
+############################################################################################################################# -->
+
+<template id="impressum">
+<div>
+
+        <h3>Impressum</h3>
+        <p>
+            Max Mustermann <br>
+            Musterstr. 77<br>
+            12345 Musterstadt
+        </p>
+        <p>
+            <h4>Hier sind wir</h4>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1myTpGjJG_S7Rd8EMwN4jabBCdP_Y1rl1" width="640" height="480"></iframe>
+        </p>
+    
+</div>
+</template>
+
+
+
+<!-- ********************************************************************************************************************************* -->
+<!-- JavaScript um Templates darzustellen -->
+    <script>
+
+        //Event_handler hinzufügen:
+
+        function addingEventListener(elemArray, templateID)
+        {
+            for(let i=0; i<elemArray.length; i++)
+            {
+                elemArray[i].addEventListener("click", () => renderTemplate(templateID));
+                console.log("Eventlistener für "+ templateID +" wurde hinzugefügt");
+            }
+        }
+
+        addingEventListener(document.getElementsByClassName('indexlink'),"index");
+        addingEventListener(document.getElementsByClassName('seite2link'),"seite2");
+        addingEventListener(document.getElementsByClassName('impressumlink'),"impressum");
+        addingEventListener(document.getElementsByClassName('kontaktlink'),"kontakt");
+       
+
+        
+
+
+        if(typeof welchesTemplate=== 'undefined')
+        {
+            let welchesTemplate= 'index';
+        }
+
+        renderTemplate('index');
+
+        function supportsTemplate()
+        {
+            return 'content' in document.createElement('template');
+        }
+
+        function renderTemplate(welchesTemplate)
+        {
+            if(supportsTemplate())
+            {
+                console.log("Templates werden unterstützt");
+                let template= document.getElementById(welchesTemplate);
+                let content= template.content;
+                if(document.getElementById('PageContent').hasChildNodes())
+                {
+                    document.getElementById('PageContent').removeChild(document.getElementById('PageContent').firstChild);
+                    //document.getElementById('PageContent').replaceChild(content,document.getElementById('PageContent').firstChild);
+                    console.log("altes Element wurde entfernt");
+                }
+                else
+                {
+                    document.getElementById('PageContent').appendChild(content);
+                }
+                
+
+
+
+
+
+            }
+        }
+    </script>
+    
+</body>
