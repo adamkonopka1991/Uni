@@ -1,0 +1,132 @@
+<DOCTYPE html>
+
+    <head>
+        <style type="text/css" href= "style.css"></style>
+    </head>
+
+    <body>
+        <nav>
+
+
+        </nav>
+
+
+        <main>
+
+        </main>
+
+    <!-- Templates #################################################################### -->
+
+    <template id="ak_home">
+            Willkommen in der FerienVorbei-App. Hier eine Übersicht über unsere Geschenke!!!
+            <div class="content">
+    
+            </div>
+            <template id="geschenkeTemplate">
+                <h3>
+                </h3>
+                <p>
+                </p>
+    
+    
+    </template>
+
+    <template id="ak_seite1">
+            Willkommen in der FerienVorbei-App. Hier eine Übersicht über unsere Geschenke!!!
+            <div class="content">
+    
+            </div>
+            <template id="geschenkeTemplate">
+                <h3>
+                </h3>
+                <p>
+                </p>
+    
+    
+    
+    </template>
+
+    <template id="ak_seite2">
+        seite2
+    </template>
+
+    <!-- ####################################################################### -->
+
+    <script>
+        const pages= {
+            ak_home: {
+                id: "ak_home",
+                navTitle: "Home"
+            },
+
+            ak_seite1: {
+                id: "ak_seite1",
+                navTitle: "seite1"
+            },
+
+            ak_seite2: {
+                id: "ak_seite2",
+                navTitle: "seite2"
+            }
+        }
+
+          /* build menu */
+    const nav = document.querySelector("nav");
+    Object.keys(pages).forEach(function (page) {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = "#".concat(pages[page].id);
+    a.id = "#".concat(pages[page].id);
+    a.innerHTML = pages[page].navTitle;
+    li.appendChild(a);
+    nav.appendChild(li);
+    });
+
+
+    window.addEventListener("hashchange", evt => {
+    const page = evt.newURL.split("#")[1] || "intro";
+    navigateTo(page);
+    evt.preventDefault();
+    });
+
+    const main = document.querySelector("main");
+   
+    function navigateTo(where) { // where must be a key of pages
+        if (!pages.hasOwnProperty(where)) { // Guard, better alternative: Map
+        where = "home";
+        }
+        const {id, navTitle} = pages[where];
+        const template = document.getElementById(id)
+        // clear content
+        while (main.firstChild) {
+        main.removeChild(main.firstChild);
+        }
+        // append content
+        main.appendChild(document.importNode(template.content, true));
+        // fix menu
+        Array.from(nav.getElementsByTagName("a")).forEach(a => a.classList.remove("active"));
+        document.getElementById("#".concat(id)).classList.add("active")
+     }
+
+       // Start with the intro page!
+  navigateTo(location.hash.substring(1) || "intro");
+  const geschenkJson = [
+    {
+      "name": "Keks",
+      "description": "zum Essen",
+    },
+    {
+      "name": "Schuhe",
+      "description": "hab ich mir erst im neuen Jahr gekauft!"
+    }
+    ];
+
+
+    </script>
+
+
+    </body>
+
+
+
+</DOCTYPE>
