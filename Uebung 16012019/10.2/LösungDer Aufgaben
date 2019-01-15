@@ -1,0 +1,58 @@
+1.
+-9 Ressourcen geladen
+-1300-1400ms
+-Unterschied DOMContentLoaded und Load 
+    -DOMContentLoaded
+        -Event das ausgelöst wird wenn das initiale HTML Dokument vollständig
+         geladen und geparst ist (es wird nicht auf Stylesheets Bilder und Frames gewartet)
+    -load-Event:
+        -wird ausgelöst wenn die Seite komplett geladen ist 
+-70,5kb
+
+2.
+-5 für aufgabe102-adamkonopka.c9.users.io
+-1 für Ih.googleusercontent.com
+
+-dürfen maximal 6 Verbindungen pro Domain aufgebaut werden
+-Umgehung dieser Restriktion durch Domain Sharding
+    -Anfragen werden auf mehrere Domains verteilt
+
+3.
+Was bedeuten die einzelnen Einträge
+    -queueing
+        -Ursache: 6tcp Connections wurden aufgebraucht (http 1.1 und 1.0)
+        -wichtigere requests vorhanden
+        -
+    -stalled
+        -= Anhalten
+    -(connection start)
+    -stalled
+    -DNS Lookup
+        -Browser is resolving the requests IP address (von Domain-Name abgeleitet)
+    -Initial connection
+    -SSL
+        -wird mit https eingesetzt 
+        -Verschlüsselung
+    -(Request/Response)
+    -Request sent
+        -The request is being sent
+    -Waiting(TTFB)
+        -Browser is waiting for the first Byte of a Response (time to first byte)
+    -Content Download
+        -Browser Receives the Response
+
+Aktion die am längsten dauert:
+-Waiting, ContentDownload
+
+Menu.css benötigt im Gegensatz zu den Bildern keine SSL Verbindungsaufbau. Warum?
+-Menucss Benötigt einen SSL Verbindungsaufbau!!
+-ssl Verschlüsselung -> wird nur in https eingesetzt.
+
+1css besitzt keine DNS Abfrage
+-Ursache:
+    -Geschieht nur am Anfang einer TCP-Verbindung? -> Verbindung gehört noch zum
+      request in dem restaurants.html geladen wurde?
+
+
+4.
+

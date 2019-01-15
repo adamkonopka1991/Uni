@@ -1,0 +1,98 @@
+body {
+	line-height: 1.5em;
+}
+
+a {
+	color: #444;
+}
+
+/* introducing pseudo elements */
+a:hover {
+	color: #222;
+	text-decoration: underline;
+}
+
+/* Headers */ 
+
+h1, h2, h3 {
+	margin: 0;
+	line-height: 1.2em;
+}
+
+h3 { /* OK */ 
+	margin: 2em 0 1em;
+}
+
+main h2, main h3 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: normal;
+}
+
+.container > header h2 {
+	font-weight: lighter;
+}
+
+.container > main h2 {
+	margin: 0.5em 0 1em;
+}
+
+.container > footer {
+	background: #f3f3f3;
+	font-size: 0.75em;
+}
+
+/* TABLE */
+
+.intro table th, .intro table td {
+	padding: 4px 8px;
+}
+
+.intro table th {
+	text-align: left;
+}
+
+.intro table td {
+	text-align: right;
+}
+
+.intro table tr:nth-child(2n+1) {
+	background: #eee;
+}
+
+/* NAV */
+
+.container > nav {
+	padding: 1em;
+	background: #f3f3f3;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	/* 3.5 CSS-ELEMENTFLUSS */
+	display: inline-block;
+	padding-right: 15px;
+}
+
+nav a {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+nav a.active {
+	font-weight: bold;
+}
+
+/*BONUS*/
+
+main img.fullwidth {
+	margin-left: -1em;
+	margin-right: -1em;
+	width: calc(100% + 2em);
+}

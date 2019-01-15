@@ -1,0 +1,93 @@
+1. Wozu dienen IP-Adressen:
+
+-Werden Geräten zugewiesen,die an das Netz angebunden sind
+-Machen Geräte adressierbar und erreichbar
+    -Verwendet zum Transport von Daten vom Absender zum Empfänger  
+    -Vergelichbar mit Adressierung auf einem Briefumschlag
+    -Router fungieren hierbei als "Poststellen"
+
+2.
+Wie ist eine Ipv4 und eine IPv6 Adresse aufgebaut?
+
+-IPv4:
+    -besteht aus 32 bits -> 2^32 Adressen darstellbar
+    -Darstellung: 4 Zahlen von 0-255
+    -besteht aus Präfix (Netzanteil) und Postifix(Geräteanteil)
+        -wird duch subnetzmaske bzw Präfixlänge bestimmt
+         wie groß der Anteil ist
+-IPv6:
+    -besteht aus 128bit -> 2^128 Adressen darstellbar
+    -ersten 64 bit bilden das Präfix letzten 64 bit : Netzwerkschnittstelle
+    -8Blöcke in hexadezimaler Schreibweise getrennt durch Doppelpunkt
+
+-Standardisierungsorganisation: IETF(v4) RFC(v6),RFC791
+
+3.
+Wie ist ein IPv4- und ein IPv6-Paket grob aufgebaut? 
+siehe Abbildung
+
+
+
+Was sind die Veränderungen zw. den Versionen?
+-128 bit - Addressen
+
+4.
+Auf welcher Schicht befindet sich das IP-Protokoll im Osi-Modell?
+-Network-Schicht
+-Aufgaben:
+    -Kommunikation zwischen Rechnern
+    -Routing ( Wegwahl)
+    -Paketvermittlung
+Welches Netzgerät?
+-Router
+
+5.
+Auf welcher Schicht befindet sich das TCP- Protokoll?
+-Transportschicht
+Hauptaufgaben:
+-Segmentierung des Datenstroms (Service Data Units,)
+-Stauvermeidung
+
+6.
+Eigenschaften von TCP
+-Ende zu Ende Transportprotokoll (z.B. P2P bzw Client to Server)
+-Zuverlässig:
+    -vollständig
+    -richtige Reihenfolge
+    -keine Duplikate
+-paketvermittelnd
+-verbindungsorientiert
+    -analog zu einer Telefonverbindung oder einem Rohr -> Reihenfolge bleibt erhalten
+    -Absicherung der Korrektheit der Daten möglich
+    -im Gegensatz zu verbindungslosen Diensten: adressierte Datenpunkte die von Knoten
+     zu Knoten gesendet werden
+
+7. 
+Vergleich UDP-TCP
+-verbindungslos:
+    -nicht sicher, da sonst Verögerung bei Datenübertragung (z.B. Telefonie,Streaming)
+-nicht zuverlässig
+
+8.
+Wozu dienen Ports
+-Lokale "Hausnummer" innerhalb eines Rechner zur Adressierung einer bestimmten Anwendung
+Schicht:
+-Transportschicht; TCP UDP
+
+9.
+Was ist NAT:
+Verschiedne Verfahren zur Veränderung von Adressen zu IPv4 Paketen
+-Problem: nicht genügend verfügbare IP Adressen
+-jeder Privathaushalt/Unternehmen erhält eine ip 
+-innerhalb Haushalt/Unternehmen erhält jeder Rechner eine eindeutige ip Adresse
+-> NAT übersetztdie eindeutige lokale IP Adresse in die gemeinsame öffentliche
+
+Hardware:
+Nat-Box (auch in Firewall, Router integriert)
+Schicht:
+-Vermittlungsschicht
+-Transportschicht
+
+10.
+Liste Wikipedia
+
