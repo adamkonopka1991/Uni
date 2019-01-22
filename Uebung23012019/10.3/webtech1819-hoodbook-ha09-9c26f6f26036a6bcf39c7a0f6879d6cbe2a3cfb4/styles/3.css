@@ -1,0 +1,62 @@
+.cards {
+	margin-left: -1em;
+	margin-right: -1em;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row; /* actually default */
+}
+
+.cards .card {
+	width: 288px;
+	margin: 0 1em 3em;
+	padding: 0;
+
+	background: #fff;
+}
+
+@media (max-width: 480px) {
+	.cards .card {
+		width: 100%;
+	}
+}
+
+.cards .card header {
+	position: relative;
+	height: 160px;
+	overflow: hidden;
+	border-radius: 2px;
+}
+.cards .card header::before {
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+
+	background: linear-gradient(transparent 50%, #333);
+}
+
+.cards .card header h3 {
+	z-index: 10;
+	position: absolute;
+	bottom: 0;
+	margin: 10px;
+
+	color: #fff;
+	font-size: 1.75rem;
+	line-height: 1.5rem;
+	text-transform: none;
+}
+
+.cards .card header h3 .subtitle {
+	text-transform: uppercase;
+	font-size: 0.8rem;
+}
+
+.cards .card main {
+	color: #555;
+	padding: 5px 0;
+}

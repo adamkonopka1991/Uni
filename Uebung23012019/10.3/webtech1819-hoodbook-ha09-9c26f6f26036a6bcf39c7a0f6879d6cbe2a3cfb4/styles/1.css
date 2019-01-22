@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+	background: #eee;
+	color: #333;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.container {
+	margin: 2em auto;
+	max-width: 960px;
+	background: white;
+	
+	box-shadow: 0 2px 5px lightgray, 0 2px 15px gray;
+	border-radius: 2px;
+
+}
+
+.container > nav, .container > footer {
+	background: #f3f3f3;
+}
+
+.container > footer > nav {
+	text-align: right;
+}
+
+.container > header, 
+.container > nav, 
+.container > main, 
+.container > footer {
+	padding: 1em;
+}
+
+.container > main {
+	min-height: 400px;
+}
+
+img {
+	width: 100%;
+}
+
