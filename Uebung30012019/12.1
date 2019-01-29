@@ -1,0 +1,53 @@
+1. 
+-npm verwaltet die Abhängigkeiten des eigenen Projekts zu anderen Paketen und Modulen
+-Kommando: npm search <keyword>
+-im Browser
+
+2.
+Installieren:
+lokal: npm install XXXXX
+global: npm install XXXXX -g
+
+Update:
+alle Pakete: npm update (alle sowohl global als auch lokal werden geupdatet)
+global: npm update -g 
+
+3.
+import blbla from 'PackageName'
+
+4.
+-dependencies: Abhängigkeiten von anderen Paketen und Modulen
+-devdependencies:Abhängigkeiten nur zur Zeit der Entwicklung
+-scripts: Skripte die direkt aus der Konsole gestartet werden können. Z.B. npm start
+-allgemeine Daten wie Lizenz und Autor des Projekts
+
+5.
+Erstellen eines Moduls:
+
+1.package.json - File erstellen 
+    -Befehl: npm init 
+    -wichtigsten Angaben angeben:
+        -name 
+        -version
+        -main: Datei die ausgeführt wird wenn das Module von einer anderen Applikation required wird.
+2.Create the file that will be loaded when my module is reqired by another application
+
+Veröffentlichen
+-Wichtig: package.json korrekt konfigurieren
+    -npm init 
+-dann testen
+-Benutzerkonto anlegen
+-dann Befehl: npm publish
+
+6.
+Semantic Versioning:
+    Patch release
+    minor release
+    major release
+
+    -> Ziel:Spezifizieren von Versionen die mit meinem Paket kompatibel sind.
+
+    Patch releases: 1.0 oder 1.0.x oder : ~1.0.4
+    Minor releases: 1 oder 1.x oder ^1.0.4
+    Major releases: * oder x
+
